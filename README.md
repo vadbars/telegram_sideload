@@ -69,6 +69,13 @@ cd to the dir where you cloned this and run in a terminal:
 pip install -r requirements.txt
 ```
 
+(Optional) Sometimes it is necessary to use a virtual environment first
+
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
 ## 5. Specify the API keys and allowed users like this:
 
 ```
