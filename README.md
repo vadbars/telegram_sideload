@@ -13,6 +13,7 @@ The bot supports both private chats and group chats (when group IDs are authoriz
 - You have a Telegram account
 - You got an API key for Google AI: https://aistudio.google.com/apikey
 - You got a Telegram bot token: https://t.me/botfather
+- You got an actual Google Gemini model ID: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions#legacy-stable
 
 ## Mindfile Setup
 
@@ -41,7 +42,8 @@ The rest of the files will be placed in the middle of the context.
 
 ## 0. Get the telegram IDs of the allowed users 
 
-For example, of your friends in telegram. You can also add group IDs if you want your bot to work in group chats.
+For example, your ID and IDs of your friends in telegram. You must also add group IDs if you want your bot to work in group chats.
+Use telegram bots like @getmyid_bot, @userinfobot for getting of IDs.
 
 ## 1. Create a VM, and do SSH into it
 
@@ -49,7 +51,7 @@ For example, in Digital Ocean, Azure, etc.
 
 You can also run the script locally. Useful for testing.
 
-The script was tested on Ubuntu VM.
+The script was tested on Ubuntu VM, Linux Mint.
 
 ## 2. Clone this repository into the VM
 
@@ -72,7 +74,7 @@ pip install -r requirements.txt
 ```
 echo "export GOOGLE_API_KEY='<your_google_api_key>'" >> ~/.bashrc
 
-echo "export GOOGLE_MODEL_NAME='gemini-2.5-pro-exp-03-25'" >> ~/.bashrc
+echo "export GOOGLE_MODEL_NAME='gemini-2.0-flash-001'" >> ~/.bashrc
 
 echo "export ALLOWED_USER_IDS='some_id1,some_id2,some_id3'" >> ~/.bashrc
 
